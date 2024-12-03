@@ -86,10 +86,10 @@ const Home = () => {
         <h2>About Me</h2>
         <p>
           I am a web developer skilled in creating interactive and responsive
-          applications. With a strong foundation in JavaScript, React, and CSS,
-          I strive to build user-friendly experiences. When I'm not coding, you
-          can find me exploring new technologies or contributing to open-source
-          projects.
+          applications. With a strong foundation in JavaScript, React, Next.js
+          and CSS, I strive to build user-friendly experiences. When I'm not
+          coding, you can find me exploring new technologies or contributing to
+          open-source projects.
         </p>
       </animated.section>
 
