@@ -6,6 +6,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer";
 import "./App.css"; // Import your main CSS file
 
 const App = () => {

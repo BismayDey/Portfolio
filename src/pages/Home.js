@@ -1,9 +1,7 @@
-// src/pages/Home.js
 import React from "react";
 import { useSpring, animated } from "react-spring";
 import TypingEffect from "../components/TypingEffect";
 import Skills from "../components/Skills";
-import Testimonials from "../components/Testimonials";
 import {
   FaReact,
   FaJsSquare,
@@ -15,12 +13,9 @@ import {
   FaJava,
   FaGithub,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // Importing useNavigate for navigation
 import "./Home.css";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
-
-const projects = [
-  // Your existing projects array
-];
 
 const Home = () => {
   const fadeProps = useSpring({
@@ -28,6 +23,8 @@ const Home = () => {
     from: { opacity: 0 },
     config: { duration: 800 },
   });
+
+  const navigate = useNavigate(); // Hook for navigation
 
   return (
     <main>
@@ -37,12 +34,17 @@ const Home = () => {
           I am a passionate developer with experience in building web
           applications. Let's explore my projects and skills!
         </p>
-        <button className="cta-button">View My Work</button>
+        <button
+          className="cta-button"
+          onClick={() => navigate("/projects")} // Navigating to Projects.js
+        >
+          View My Work
+        </button>
 
         {/* Social Media Links */}
         <div className="social-media">
           <a
-            href="https://github.com/username"
+            href="https://github.com/BismayDey"
             target="_blank"
             rel="noopener noreferrer"
             className="social-button"
@@ -50,7 +52,7 @@ const Home = () => {
             <i className="fab fa-github"></i> GitHub
           </a>
           <a
-            href="https://linkedin.com/in/username"
+            href="https://www.linkedin.com/in/bismay-dey-634937268/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-button"
@@ -58,7 +60,7 @@ const Home = () => {
             <i className="fab fa-linkedin"></i> LinkedIn
           </a>
           <a
-            href="https://twitter.com/username"
+            href="https://x.com/BismayDey123"
             target="_blank"
             rel="noopener noreferrer"
             className="social-button"
@@ -66,7 +68,7 @@ const Home = () => {
             <i className="fab fa-twitter"></i> Twitter
           </a>
           <a
-            href="https://yourportfolio.com"
+            href="https://bismaydey.github.io/FREEZZZ/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-button"
@@ -80,43 +82,6 @@ const Home = () => {
         <Skills />
       </animated.section>
 
-      <animated.section style={fadeProps} className="projects">
-        <h2>My Projects</h2>
-        <div className="projects-container">
-          {projects.map((project, index) => (
-            <div key={index} className="project-card">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="project-image"
-              />
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="project-links">
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-button"
-                >
-                  Live Demo
-                </a>
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-button"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </animated.section>
-
-      <Testimonials />
-
       <animated.section style={fadeProps} className="about-me">
         <h2>About Me</h2>
         <p>
@@ -127,6 +92,7 @@ const Home = () => {
           projects.
         </p>
       </animated.section>
+
       <section className="tech-stack">
         <h2>Tech Stack</h2>
         <div className="tech-icons">
@@ -142,14 +108,20 @@ const Home = () => {
           {/* Add more icons as needed */}
         </div>
       </section>
+
       <animated.section style={fadeProps} className="contact">
         <h2>Contact Me</h2>
         <p>If you'd like to get in touch, feel free to reach out!</p>
-        <button className="cta-button">Contact Me</button>
+        <button
+          className="cta-button"
+          onClick={() => navigate("/contact")} // Navigating to Contact.js
+        >
+          Contact Me
+        </button>
       </animated.section>
 
       <footer>
-        <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Bismay Dey. All rights reserved.</p>
       </footer>
     </main>
   );

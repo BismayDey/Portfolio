@@ -1,47 +1,109 @@
-.projects-container {
+.enhanced-projects-section {
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  padding: 50px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.enhanced-projects-heading {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-in-out;
+}
+
+.enhanced-projects-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
-  gap: 20px;
 }
 
-.project-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 300px; /* Adjust width as needed */
-  transition: transform 0.2s;
+.enhanced-project-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  text-align: left;
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-  transform: scale(1.05);
+.enhanced-project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-.project-links {
+.enhanced-project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.enhanced-project-content {
+  padding: 15px;
+}
+
+.enhanced-project-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.enhanced-project-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.enhanced-project-links {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
 }
 
-.project-links a {
-  color: #007bff;
+.enhanced-project-link {
   text-decoration: none;
+  color: #1f4037;
+  background: #99f2c8;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.project-links a:hover {
-  text-decoration: underline;
+.enhanced-project-link:hover {
+  background: #1f4037;
+  color: #ffffff;
 }
 
-/* Optional: Responsive design */
-@media (max-width: 768px) {
-  .projects-container {
-    flex-direction: column;
-    align-items: center;
+.live-link {
+  background: #ff6f61;
+  color: #ffffff;
+}
+
+.live-link:hover {
+  background: #c04338;
+}
+
+/* Keyframes for Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
   }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-  .project-card {
-    width: 100%;
-    max-width: 400px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
