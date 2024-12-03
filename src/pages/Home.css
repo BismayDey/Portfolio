@@ -1,0 +1,385 @@
+/* src/pages/Home.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  overflow: hidden; /* Prevent overflow for content */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #007bff, #6610f2);
+  color: white;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 40px 20px;
+}
+
+/* Projects Section */
+.projects {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 20px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 250px; /* Fixed width for project cards */
+  position: relative; /* Position for absolute children */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+}
+
+.project-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  flex: 1; /* Allow buttons to grow */
+  margin: 0 5px; /* Add margin between buttons */
+}
+
+.project-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+  padding: 40px 20px;
+  text-align: center;
+  background: #e9ecef;
+}
+
+.services h2 {
+  margin-bottom: 20px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 220px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Blog Posts Section */
+.blog-posts {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f1f3f5;
+}
+
+.blog-posts h2 {
+  margin-bottom: 20px;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.blog-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 220px;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+/* About Me Section */
+.about-me {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about-me h2 {
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #007bff;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Social Media Section */
+.social-media {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 15px; /* Spacing between buttons */
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-button i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.social-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+.cta-button,
+.social-button,
+.project-button {
+  display: inline-flex;
+  align-items: center; /* Center the text and icon vertically */
+  justify-content: center; /* Center content horizontally */
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  padding: 15px 30px; /* Padding for buttons */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+  position: relative; /* Needed for the pseudo-element effect */
+  overflow: hidden; /* Prevent overflow of the pseudo-element */
+}
+
+/* Social Media Button Specific Styles */
+.social-button {
+  background-color: #007bff; /* Blue for social buttons */
+}
+
+.social-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Project Button Specific Styles */
+.project-button {
+  background-color: #007bff; /* Blue for project buttons */
+}
+
+.project-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Hover Animation Effect */
+.cta-button:hover,
+.social-button:hover,
+.project-button:hover {
+  transform: translateY(-3px); /* Lift button on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Animated Glow Effect */
+.cta-button::after,
+.social-button::after,
+.project-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2); /* Light background for glow effect */
+  transition: transform 0.3s, opacity 0.3s;
+  z-index: -1; /* Place behind the button */
+  transform: scale(0); /* Initially scale down */
+}
+
+.cta-button:hover::after,
+.social-button:hover::after,
+.project-button:hover::after {
+  transform: scale(1); /* Scale up on hover */
+  opacity: 1; /* Show the glow */
+}
+/* src/pages/Home.css */
+
+/* ... existing CSS ... */
+
+/* Tech Stack Section */
+.tech-stack {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f0f0f0; /* Light background for contrast */
+}
+
+.tech-stack h2 {
+  margin-bottom: 20px;
+  font-size: 2rem; /* Increase heading size */
+  color: #333; /* Dark color for contrast */
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between icons */
+}
+
+/* Individual Tech Icon */
+.tech-icon {
+  font-size: 3rem; /* Adjust size as needed */
+  transition: transform 0.3s, filter 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Colorful Icon Styles */
+.tech-icon:nth-child(1) {
+  color: #61dafb;
+} /* React */
+.tech-icon:nth-child(2) {
+  color: #f7df1e;
+} /* JavaScript */
+.tech-icon:nth-child(3) {
+  color: #e44d26;
+} /* HTML5 */
+.tech-icon:nth-child(4) {
+  color: #1572b6;
+} /* CSS3 */
+.tech-icon:nth-child(5) {
+  color: #8cc84b;
+} /* Node.js */
+.tech-icon:nth-child(6) {
+  color: #f34f29;
+} /* Git */
+.tech-icon:nth-child(7) {
+  color: #306998;
+} /* Python */
+.tech-icon:nth-child(8) {
+  color: #007396;
+} /* Java */
+.tech-icon:nth-child(9) {
+  color: black;
+}
+
+/* Hover Effect */
+.tech-icon:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+  filter: brightness(1.2); /* Slight brightness on hover */
+}
